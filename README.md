@@ -4,6 +4,8 @@ Aulas de programação
 
 ## nomeclatura de variaveis
 
+uma variavel pode ter qualquer nome praticamente, contanto que nao comece com numeros, e nao tenha caracteres especiais (e tb nao seja um nome de variavel ja da linguagem. tipo, vc nao pode chamar uma variavel de "var")
+
 claro, vc pode ser um pnc e nomear todas suas variaveis como x, y, z... e que se foda o proximo que vai tentar ler seu codigo, mas lembre se: o proximo que vai dar manutenção no seu codigo pode ser voce!
 entao sempre nomeie suas variaveis com nomes que façam sentido, e que expliquem o seu proposito
 
@@ -33,6 +35,13 @@ var camelcase;
 var numerodepessoasquegostaramdofinaldegameofthrones = 0;
 //a mesma variavel com camelCase fica muito mais facil: (nao que fique tao mais facil assim)
 var numeroDePessoasQueGostaramDoFinalDeGameOfThrones = 0;
+```
+
+uma outra boa pratica é de colocar nome de constantes com letra maiusculas
+
+```javascript
+// é meio que padrao isso, e vc consegue ver de longe que é uma constante
+const ESSA_VARIAVEL_EH_UMA_CONSTANTE = "isso mesmo, ela é";
 ```
 
 ## if
