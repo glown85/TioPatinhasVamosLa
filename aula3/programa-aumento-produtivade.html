@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>calculadora</title>
+    </head>
+    <body></body>
+    <script>
+        // programa de aumento de produtividade (segundo seu chefe isso vai ajudar a melhorar a moral)
+        // seu chefe quer saber se seus funcionarios estao trabalhando. entao ele quer que vc faça um programa que
+        // pergunte ao usuario se ele esta trabalhando
+        // usando as opçao 1 - sim, 2 - nao
+        // quando a opcao 2 for escolhida, alerte para que ele volte a trabalhar, e termine o programa
+
+        var opcao = Number.parseFloat(
+            prompt("Você está trabalhando? 1) Sim. 2) Não")
+        );
+
+        while (opcao != 2) {
+            if (opcao != 1) alert("digite um codigo valido");
+
+            opcao = Number.parseFloat(
+                prompt("Você está trabalhando? 1) Sim. 2) Não")
+            );
+        }
+
+        alert("Volte a trabalhar imediatamente");
+    </script>
+</html>

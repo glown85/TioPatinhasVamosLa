@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        var primeiroNumero = Number.parseFloat(
+            prompt(
+                "digite o primeiro numero para realizar a operação matemática"
+            )
+        );
+        var segundoNumero = Number.parseFloat(
+            prompt(
+                "digite o segundo numero para realizar a operação matemática"
+            )
+        );
+
+        var opcao = prompt(
+            "escolha qual operação gostaria de fazer 1) Somar. 2) Subtrair. 3) Dividir. 4) Multiplicar."
+        ); //2
+
+        var resultado;
+
+        if (opcao == 1) {
+            resultado = primeiroNumero + segundoNumero;
+        } else if (opcao == 2) {
+            resultado = primeiroNumero - segundoNumero;
+        } else if (opcao == 3) {
+            resultado = primeiroNumero / segundoNumero;
+        } else if (opcao == 4) {
+            resultado = primeiroNumero * segundoNumero;
+        }
+
+        alert(resultado);
+    </script>
+</html>

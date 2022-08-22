@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>while 1</title>
+    </head>
+    <body></body>
+    <script>
+        //enquanto
+        // var estaTrabahlando = prompt("vc esta trabalhando?");
+        // while (estaTrabahlando != "nao") {
+        //   estaTrabahlando = prompt("vc esta trabalhando");
+        // }
+        // alert("vai trabalhar");
+
+        var descricao =
+            "Escolha a opção, onde 1-soma; 2 subtração; 3-Divisão, 4-multiplicação, 5-sair";
+        var opcao = prompt(descricao);
+
+        while (opcao != "5") {
+            var calc1 = Number.parseFloat(
+                prompt("Digite o primeiro número da operação")
+            );
+            var calc2 = Number.parseFloat(
+                prompt("Digite o segundo número da operação")
+            );
+
+            switch (opcao) {
+                case 1:
+                    alert(calc1 + calc2);
+                    break;
+                case 2:
+                    alert(calc1 - calc2);
+                    break;
+                case 3:
+                    alert(calc1 / calc2);
+                    break;
+                case 4:
+                    alert(calc1 * calc2);
+                    break;
+
+                default:
+                    alert("Digite um código válido");
+                    break;
+            }
+            opcao = prompt(descricao);
+        }
+        alert("Acabou");
+
+        //quero um programa que printe no console, todos os numeros diviseiveis por 2 de 0 a 100
+    </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>calculadora</title>
+    </head>
+    <body></body>
+    <script>
+        var opcao = Number.parseFloat(
+            prompt(
+                "escolha qual operação gostaria de fazer 1) Somar. 2) Subtrair. 3) Dividir. 4) Multiplicar. 5) sair"
+            )
+        );
+        while (opcao != 5) {
+            //loop
+            var primeiroNumero = Number.parseFloat(
+                prompt(
+                    "digite o primeiro numero para realizar a operação matemática"
+                )
+            );
+            var segundoNumero = Number.parseFloat(
+                prompt(
+                    "digite o segundo numero para realizar a operação matemática"
+                )
+            );
+
+            var resultado;
+            switch (opcao) {
+                case 1:
+                    resultado = primeiroNumero + segundoNumero;
+                    break;
+                case 2:
+                    resultado = primeiroNumero - segundoNumero;
+                    break;
+                case 3:
+                    resultado = primeiroNumero / segundoNumero;
+                    break;
+                case 4:
+                    resultado = primeiroNumero * segundoNumero;
+                    break;
+
+                default:
+                    alert("opcao invalida");
+                    break;
+            }
+
+            alert(resultado);
+
+            opcao = Number.parseFloat(
+                prompt(
+                    "escolha qual operação gostaria de fazer 1) Somar. 2) Subtrair. 3) Dividir. 4) Multiplicar. 5) sair"
+                )
+            );
+        }
+        alert("fim do programa");
+    </script>
+</html>
