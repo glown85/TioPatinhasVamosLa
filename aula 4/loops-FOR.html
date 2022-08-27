@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        //while = pouco
+        //do = NUNCA
+        //for - SEMPRE
+
+        //somar numeros de 1 a 100
+        // var soma = 0;
+        // for (var numero = 0; numero <= 100; numero = numero + 1) {
+        //     soma = soma + numero;
+        // }
+        // alert(soma);
+
+        // var numero = 0;
+        // var soma = 0;
+        // while(numero <=100){
+        //     soma = soma + numero;
+        //     numero = numero + 1
+        // }
+        // alert(soma);
+
+        // todas essses comandos tem a mesma funcao
+        // numero = numero + 1;
+        // numero+=1;//mais o numero que vc colocar
+        // numero++;//mais um
+
+        // todas essses comandos tem a mesma funcao
+        // numero = numero - 1;
+        // numero-=1;//mais o numero que vc colocar
+        // numero--;//mais um
+
+        for (var resultado = 1; resultado == 1; ) {
+            var nome = prompt("digite o nome do aluno a ser avaliado");
+            var nota1 = parseFloat(prompt("digitar nota 1"));
+            var nota2 = parseFloat(prompt("digitar nota 2"));
+            var nota3 = parseFloat(prompt("digitar nota 3"));
+            var media = (nota1 + nota2 + nota3) / 3;
+            if (media >= 7) {
+                alert("Parabéns! " + nome + ", Você foi aprovado " + media);
+            }
+            if (media < 7 && media >= 3) {
+                alert(
+                    "Cuidado " + nome + ", Você ficou em recuperação! " + media
+                );
+            }
+            if (media < 3) {
+                alert(nome + " Reprovado! " + media);
+            }
+            resultado = parseFloat(
+                prompt("digite 1- para cadastrar outro usuario, e 2- para sair")
+            );
+        }
+    </script>
+</html>

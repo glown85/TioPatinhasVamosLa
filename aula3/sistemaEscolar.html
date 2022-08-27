@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        var nomeAluno = 0;
+        var cadastrarAluno = true;
+        var prova1 = 0;
+        var prova2 = 0;
+        var prova3 = 0;
+        var media = 0;
+        var quantidadeAlunos = 0;
+        var mediaTotal = 0;
+
+        alert("Bem vindo ao sistema de notas");
+        while (cadastrarAluno) {
+            quantidadeAlunos = quantidadeAlunos + 1;
+
+            nomeAluno = prompt("Insira o nome do aluno");
+
+            while (!/^[a-zA-Z]+$/.test(nomeAluno)) {
+                alert("Insira um nome válido");
+                prompt("Insira o nome do aluno");
+            }
+
+            prova1 = Number.parseFloat(
+                prompt(" Insira a nota da prova 1, de 0 a 10")
+            );
+            while (prova1 > 10 || prova1 < 0 || isNaN(prova1)) {
+                alert("Este número não é válido, escolha outro valor");
+                prova1 = Number.parseFloat(
+                    prompt(" Insira a nota da prova 1, de 0 a 10")
+                );
+            }
+
+            prova2 = Number.parseFloat(
+                prompt(" Insira a nota da prova 2, de 0 a 10")
+            );
+            while (prova2 > 10 || prova2 < 0 || isNaN(prova2)) {
+                alert("Este número não é válido, escolha outro valor");
+                prova2 = Number.parseFloat(
+                    prompt(" Insira a nota da prova 2, de 0 a 10")
+                );
+            }
+            prova3 = Number.parseFloat(
+                prompt(" Insira a nota da prova 3, de 0 a 10")
+            );
+            while (prova3 > 10 || prova3 < 0 || isNaN(prova3)) {
+                alert("Este número não é válido, escolha outro valor");
+                prova3 = Number.parseFloat(
+                    prompt(" Insira a nota da prova 3, de 0 a 10")
+                );
+            }
+            media = (prova1 + prova2 + prova3) / 3;
+            if (media >= 7) {
+                alert("Aprovado!");
+            } else {
+                if (media < 3) {
+                    alert("Reprovado");
+                } else {
+                    if (media > 3 && media < 7);
+                    {
+                        alert("Recuperação");
+                    }
+                }
+            }
+            mediaTotal = mediaTotal + media;
+
+            cadastrarAluno = Number.parseFloat(
+                prompt("Deseja cadastrar novo aluno? 1-Sim; 2-Não")
+            );
+            while (cadastrarAluno != 1 && cadastrarAluno != 2) {
+                alert("Insira uma das opções.");
+                cadastrarAluno = prompt(
+                    "Deseja cadastrar novo aluno? 1-Sim; 2-Não"
+                );
+                5;
+            }
+            if (cadastrarAluno == 1) {
+                var cadastrarAluno = true;
+            } else {
+                if (cadastrarAluno == 2) {
+                    cadastrarAluno = false;
+                    alert(
+                        "O total de alunos é de " +
+                            quantidadeAlunos +
+                            " e a média dos mesmos é de: " +
+                            mediaTotal / quantidadeAlunos
+                    );
+                }
+            }
+        }
+
+        //if (cadastrarAluno !=1 && cadastrarAluno !=2 || isNaN(cadastrarAluno)) {
+        // } else
+        //if (cadastrarAluno =) {
+        //  alert ("O total de alunos é de " + quantidadeAlunos + " e a média dos mesmos é de: " + mediaTotal/quantidadeAlunos);
+
+        alert("Fim do programa");
+    </script>
+</html>

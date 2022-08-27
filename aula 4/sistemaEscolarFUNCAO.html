@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        var nomeAluno = 0;
+        var cadastrarAluno = true;
+        var prova1 = 0;
+        var prova2 = 0;
+        var prova3 = 0;
+        var media = 0;
+        var quantidadeAlunos = 0;
+        var mediaTotal = 0;
+
+        function pegarValorValido(texto, notaMaxima, valorMinimo) {
+            var numero = Number.parseFloat(prompt(texto));
+            while (
+                numero > notaMaxima ||
+                numero < valorMinimo ||
+                isNaN(numero)
+            ) {
+                alert("Este número não é válido, escolha outro valor");
+                numero = Number.parseFloat(prompt(texto));
+            }
+            return numero;
+        }
+
+        // fazer uma funcao que mostre se o aluno ta aprovado, reprovado ou em recuperacao
+        // precisa passar os intervalos para a funcao, e a media final
+        // 3 reprovado, 3 7 recupera, 7 aprovado
+        // 5, <2 reprovado, > 8 aprovado, o resto é recuperacao
+        function calcularMedia(media, min, max) {
+            if (media >= max) {
+                alert("Aprovado!");
+            } else if (media < min) {
+                alert("Reprovado");
+            } else {
+                alert("Recuperação");
+            }
+        }
+
+        // funcao para pedir ao usuario se vai continuar cadastrando ou nao outro aluno
+        // tem que retornar um boolean
+        // 1- para continuar, 2- para parar
+        function signNewEntry() {
+            var option = pegarValorValido(
+                "deseja cadastrar outro aluno? 1- sim, 2-nao",
+                2,
+                1
+            );
+
+            if (option == 1) {
+                return true;
+            } else if (option == 2) {
+                return false;
+            }
+        }
+
+        alert("Bem vindo ao sistema de notas");
+        while (cadastrarAluno) {
+            quantidadeAlunos = quantidadeAlunos + 1;
+
+            nomeAluno = prompt("Insira o nome do aluno");
+
+            while (!/^[a-zA-Z]+$/.test(nomeAluno)) {
+                alert("Insira um nome válido");
+                prompt("Insira o nome do aluno");
+            }
+
+            prova1 = pegarValorValido("insira a nota da prova 1", 100, 0);
+            prova2 = pegarValorValido("insira a nota da prova 2", 100, 0);
+            prova3 = pegarValorValido("insira a nota da prova 3", 100, 0);
+
+            media = (prova1 + prova2 + prova3) / 3;
+            calcularMedia(media, 3, 7);
+
+            mediaTotal = mediaTotal + media;
+
+            cadastrarAluno = signNewEntry();
+        }
+        alert(
+            "O total de alunos é de " +
+                quantidadeAlunos +
+                " e a média dos mesmos é de: " +
+                mediaTotal / quantidadeAlunos
+        );
+
+        alert("Fim do programa");
+    </script>
+</html>

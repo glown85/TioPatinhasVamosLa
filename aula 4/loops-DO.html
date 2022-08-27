@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        //while = pouco
+        //do = NUNCA
+        //for
+        var resultado = 2342354;
+        do {
+            var nome = prompt("digite o nome do aluno a ser avaliado");
+            var nota1 = parseFloat(prompt("digitar nota 1"));
+            var nota2 = parseFloat(prompt("digitar nota 2"));
+            var nota3 = parseFloat(prompt("digitar nota 3"));
+            var media = (nota1 + nota2 + nota3) / 3;
+            if (media >= 7) {
+                alert("Parabéns! " + nome + ", Você foi aprovado " + media);
+            }
+            if (media < 7 && media >= 3) {
+                alert(
+                    "Cuidado " + nome + ", Você ficou em recuperação! " + media
+                );
+            }
+            if (media < 3) {
+                alert(nome + " Reprovado! " + media);
+            }
+            resultado = parseFloat(
+                prompt("digite 1- para cadastrar outro usuario, e 2- para sair")
+            );
+        } while (resultado == 1);
+    </script>
+</html>
