@@ -1,4 +1,4 @@
-function pegarValorValido(texto, notaMaxima, valorMinimo) {
+function pegarNumeroValido(texto, notaMaxima, valorMinimo) {
     var numero = Number.parseFloat(prompt(texto));
     while (numero > notaMaxima || numero < valorMinimo || isNaN(numero)) {
         alert("Este número não é válido, escolha outro valor");
@@ -25,7 +25,7 @@ function calcularMedia(media, min, max) {
 // tem que retornar um boolean
 // 1- para continuar, 2- para parar
 function signNewEntry() {
-    var option = pegarValorValido(
+    var option = pegarNumeroValido(
         "deseja cadastrar outro aluno? 1- sim, 2-nao",
         2,
         1
