@@ -1,28 +1,28 @@
-function* generateDigitsOfPi() {
-    let q = 1n;
-    let r = 180n;
-    let t = 60n;
-    let i = 2n;
+// function* generateDigitsOfPi() {
+//     let q = 1n;
+//     let r = 180n;
+//     let t = 60n;
+//     let i = 2n;
 
-    while (true) {
-        let digit = ((i * 27n - 12n) * q + r * 5n) / (t * 5n);
-        yield Number(digit);
-        let u = i * 3n;
-        u = (u + 1n) * 3n * (u + 2n);
-        r = u * 10n * (q * (i * 5n - 2n) + r - t * digit);
-        q *= 10n * i * (i++ * 2n - 1n);
-        t *= u;
-    }
-}
+//     while (true) {
+//         let digit = ((i * 27n - 12n) * q + r * 5n) / (t * 5n);
+//         yield Number(digit);
+//         let u = i * 3n;
+//         u = (u + 1n) * 3n * (u + 2n);
+//         r = u * 10n * (q * (i * 5n - 2n) + r - t * digit);
+//         q *= 10n * i * (i++ * 2n - 1n);
+//         t *= u;
+//     }
+// }
 
-const iter = generateDigitsOfPi();
-const pi = [];
+// const iter = generateDigitsOfPi();
+// const pi = [];
 
-for (let i = 0; i < 1000; i++) {
-    pi.push(iter.next().value);
-}
+// for (let i = 0; i < 1000; i++) {
+//     pi.push(iter.next().value);
+// }
 
-console.log(pi);
+// console.log(pi);
 
 // calcular o primeiro palindromo de 9 digitos primo do pi
 // calcular o pi /done
@@ -63,3 +63,13 @@ let p4 = [0, 1, 1, 0];
 let p5 = [1, 1, 0, 1, 1];
 let p6 = [1, 2, 0, 1, 1];
 console.log(palindromo(p4));
+
+for (let i = 0; i < alunos.length; i++) {
+    for (let j = 0; j < alunos[i].length; j++) {
+        console.log(alunos[i][j]);
+    }
+}
+
+//uma funçao que pegue um array, e calcule a moda
+//uma funçao que pegue um array, e calcule a mediana
+//uma funçao que pegue um array, e calcule a media
